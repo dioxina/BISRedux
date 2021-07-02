@@ -1,4 +1,15 @@
 # BestInSlotRedux Changelog
+##9.1.0c
+*fix ilvl from dungeons
+*Added Dungeon difficutly "Myhtic + Casion" for Great Vault items (ilvl 252)
+*Mythic + displayed Items ilvl 246 (12/12 Upgrades)
+
+##9.1.0b
+*Added missing variable
+
+##9.1.0a
+*9.1.0 Concent Bug fixes
+
 ##9.1.0
 *Add Sanctum of Domination
 *Add Tazavesh, the Veiled Market
@@ -27,7 +38,7 @@
 *Raid and dungeon names should now appropriately appear under the Overview tab.
 
 ## Version 9.0.3
-*Added Shadowlands Dungeon Support. 
+*Added Shadowlands Dungeon Support.
 *Addon is ready to go once Shadowlands is Released.
 
 ## Version 9.0.2

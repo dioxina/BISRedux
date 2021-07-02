@@ -605,7 +605,7 @@ function BestInSlot:HasItemEquipped(itemid, difficulty)
 end
 
 function BestInSlot:GetItemInfoFromLink(itemlink)
-  local _,itemid, enchantId, gemId1, gemId2, gemId3, gemId4, suffixId, uniqueId, linkLevel, specId, upgradeId, instanceDifficultyID, numBonusId, bonusId1, bonusId2, bonusId3, upgradeVal = (":"):split(itemlink)
+  local _,itemid, enchantId, gemId1, gemId2, gemId3, gemId4, suffixId, uniqueId, linkLevel, specId, upgradeId, instanceDifficultyID, numBonusId, bonusId1, bonusId2, bonusId3, bonusId4, bonusId5, upgradeVal = (":"):split(itemlink)
   return tonumber(itemid), tonumber(instanceDifficultyID), bonusId1, bonusId2
 end
 
@@ -1013,10 +1013,10 @@ end
 function BestInSlot:GetItemString(itemid, difficulty)
   if not itemid then error("You should provide an itemid!") end
   difficulty = difficulty or 1
-  local instanceDifficulty, bonusID1, bonusID2, bonusID3 = self:GetDifficultyIdForDungeon(difficulty, itemData[itemid] and itemData[itemid].dungeon)
-  numBonusIDs = (bonusID3 ~= nil and 3) or (bonusID2 ~= nil and 2) or (bonusID1 ~= nil and 1) or 0
+  local instanceDifficulty, bonusID1, bonusID2, bonusID3, bonusID4, bonusID5 = self:GetDifficultyIdForDungeon(difficulty, itemData[itemid] and itemData[itemid].dungeon)
+  numBonusIDs = (bonusID5 ~= nil and 5) or (bonusID4 ~= nil and 4) or (bonusID3 ~= nil and 3) or (bonusID2 ~= nil and 2) or (bonusID1 ~= nil and 1) or 0
   --item:itemId:enchantId:gemId1:gemId2:gemId3:gemId4:suffixId:uniqueId:linkLevel:specializationID:upgradeId:instanceDifficultyId:numBonusIds:bonusId1:bonusId2:upgradeValue
-  return ("item:%d:::::::::::%d:%d:%d:%d:%d:"):format(itemid, instanceDifficulty, numBonusIDs, bonusID1, bonusID2, bonusID3)
+  return ("item:%d:::::::::::%d:%d:%d:%d:%d:%d:%d:"):format(itemid, instanceDifficulty, numBonusIDs, bonusID1, bonusID2, bonusID3, bonusID4, bonusID5)
 end
 
 --- Gets the internal item table for the specified itemid

@@ -3,16 +3,19 @@ local dungeonTierId = 90002
 local tocVersion = select(1, GetBuildInfo())
 local bonusIds = {
 	bonusids = {
-		[1] = {4785,6805,1472},
-		[2] = {4785,6806,1485},
-		[3] = {4786,6807,1498},
-		[4] = {4786,6536,1540},
+		[1] = {3524},
+		[2] = {3524},
+		[3] = {3524},
+--  [4] = {difficulty,6652,12/12aufwertungen,+ilvl,rarity}--M+
+		[4] = {7359,6652,7401,1560,6646},--M+
+		[5] = {6536,6652,1566,6646},--M+ Casino
 	},
 	difficultyconversion = {
 		[1] = 1, -- NHC
 		[2] = 2, -- HC
 		[3] = 23, -- Mythic
-		[4] = 8, -- Mythic+
+		[4] = 35, -- Mythic+
+		[5] = 8, -- Great Vault
 	},
 }
 
@@ -108,7 +111,7 @@ function Dungeons:Plaguefall()
     178773, --Plague Handler's Greathelm
     178762, --Blightborne Chain Legguards
     178756, --Stradama's Misplaced Slippers
-    178770, --Slimy Consumptive Organ 
+    178770, --Slimy Consumptive Organ
   }
   self:RegisterBossLoot(plaguefall, lootTable, bossName)
 
@@ -356,7 +359,7 @@ function Dungeons:TheaterofPain()
     178809, --Soulletting Ruby
   }
   self:RegisterBossLoot(theaterofpain, lootTable, bossName)
-  
+
   -----------------------------------
   ----- Mordretha, the Endless Empress
   -----------------------------------
@@ -603,43 +606,43 @@ if tocVersion >= "9.1.0" then
 	  -----------------------------------
 	  ----- Zo'phex the Sentinel
 	  -----------------------------------
-		local bossName = EJ_GetEncounterInfo(2437) 
-		local lootTable = { 
-			183468, --Born Anew 
-			183498, --Cloaked in Shadows 
-			182110, --Crippling Hex 
-			182330, --Demonic Parole 
-			181962, --Mental Recovery 
-			182338, --Pure Concentration 
-			181841, --Reinforced Shell 
-			185824, --Blade of Grievous Harm 
-			185780, --Interrogator's Flensing Blade 
-			185816, --Confiscated Bracers of Concealment 
-			185815, --Vambraces of Verification 
-			185793, --Cyphered Gloves 
-			185791, --Knuckle-Dusting Handwraps 
-		} 
+		local bossName = EJ_GetEncounterInfo(2437)
+		local lootTable = {
+			183468, --Born Anew
+			183498, --Cloaked in Shadows
+			182110, --Crippling Hex
+			182330, --Demonic Parole
+			181962, --Mental Recovery
+			182338, --Pure Concentration
+			181841, --Reinforced Shell
+			185824, --Blade of Grievous Harm
+			185780, --Interrogator's Flensing Blade
+			185816, --Confiscated Bracers of Concealment
+			185815, --Vambraces of Verification
+			185793, --Cyphered Gloves
+			185791, --Knuckle-Dusting Handwraps
+		}
 		self:RegisterBossLoot(tazaveshtheveiledmarket, lootTable, bossName)
 
 
 	  -----------------------------------
 	  ----- The Grand Menagerie
 	  -----------------------------------
-		local bossName = EJ_GetEncounterInfo(2454) 
-		local lootTable = { 
-			184587, --Ambuscade 
-			181512, --Dizzying Tumble 
-			181756, --Incantation of Swiftness 
-			181469, --Indelible Victory 
-			183044, --Kilrogg's Cunning 
-			181836, --Spirit Drain 
-			185777, --Fang of Alcruux 
-			185821, --Gluttonous Rondel 
-			185814, --Auctioneer's Counting Bracers 
-			185792, --Achillite's Unbreakable Grip 
-			185794, --Gavel Pounders 
-			185809, --Venza's Powderbelt 
-			185840, --Seal of the Panoply 
+		local bossName = EJ_GetEncounterInfo(2454)
+		local lootTable = {
+			184587, --Ambuscade
+			181512, --Dizzying Tumble
+			181756, --Incantation of Swiftness
+			181469, --Indelible Victory
+			183044, --Kilrogg's Cunning
+			181836, --Spirit Drain
+			185777, --Fang of Alcruux
+			185821, --Gluttonous Rondel
+			185814, --Auctioneer's Counting Bracers
+			185792, --Achillite's Unbreakable Grip
+			185794, --Gavel Pounders
+			185809, --Venza's Powderbelt
+			185840, --Seal of the Panoply
 		}
 		self:RegisterBossLoot(tazaveshtheveiledmarket, lootTable, bossName)
 
@@ -647,23 +650,23 @@ if tocVersion >= "9.1.0" then
 	  -----------------------------------
 	  ----- Mailroom Mayhem
 	  -----------------------------------
-		local bossName = EJ_GetEncounterInfo(2436) 
-		local lootTable = { 
-			182584, --Cheetah's Vigor 
-			181837, --Clear Mind 
-			182461, --Echoing Blessings 
-			186534, --Gizmo 
-			182325, --Ravenous Consumption 
-			183497, --Recuperator 
-			183465, --Ursine Vigor 
-			185811, --Package Protector 
-			185817, --Bracers of Autonomous Classification 
-			185808, --Discount Mail-Order Belt 
-			185807, --Pan-Dimensional Packing Cord 
-			185787, --Implacable Weatherproof Treads 
-			185845, --First Class Healing Distributor 
-			185846, --Miniscule Mailemental in an Envelope 
-			185844, --Ticking Sack of Terror 
+		local bossName = EJ_GetEncounterInfo(2436)
+		local lootTable = {
+			182584, --Cheetah's Vigor
+			181837, --Clear Mind
+			182461, --Echoing Blessings
+			186534, --Gizmo
+			182325, --Ravenous Consumption
+			183497, --Recuperator
+			183465, --Ursine Vigor
+			185811, --Package Protector
+			185817, --Bracers of Autonomous Classification
+			185808, --Discount Mail-Order Belt
+			185807, --Pan-Dimensional Packing Cord
+			185787, --Implacable Weatherproof Treads
+			185845, --First Class Healing Distributor
+			185846, --Miniscule Mailemental in an Envelope
+			185844, --Ticking Sack of Terror
 		}
 		self:RegisterBossLoot(tazaveshtheveiledmarket, lootTable, bossName)
 
@@ -671,43 +674,43 @@ if tocVersion >= "9.1.0" then
 	  -----------------------------------
 	  ----- Myza's Oasis
 	  -----------------------------------
-		local bossName = EJ_GetEncounterInfo(2452) 
-		local lootTable = { 
-			182460, --Accrued Vitality 
-			183470, --Born of the Wilds 
-			182656, --Disturb the Peace 
-			181508, --Fortifying Ingredients 
-			182106, --Refreshing Waters 
-			181464, --Winter's Protection 
-			185783, --Yasahm the Riftbreaker 
-			185812, --Acoustically Alluring Censer 
-			185842, --Ornately Engraved Amplifier 
-			185802, --Breakbeat Shoulderguards 
-			185804, --Harmonious Spaulders 
-			185806, --Improvisational Cinch 
-			185789, --Sabatons of Measured Time 
-		} 
+		local bossName = EJ_GetEncounterInfo(2452)
+		local lootTable = {
+			182460, --Accrued Vitality
+			183470, --Born of the Wilds
+			182656, --Disturb the Peace
+			181508, --Fortifying Ingredients
+			182106, --Refreshing Waters
+			181464, --Winter's Protection
+			185783, --Yasahm the Riftbreaker
+			185812, --Acoustically Alluring Censer
+			185842, --Ornately Engraved Amplifier
+			185802, --Breakbeat Shoulderguards
+			185804, --Harmonious Spaulders
+			185806, --Improvisational Cinch
+			185789, --Sabatons of Measured Time
+		}
 		self:RegisterBossLoot(tazaveshtheveiledmarket, lootTable, bossName)
 
 
 	  -----------------------------------
 	  ----- So'azmi
 	  -----------------------------------
-		local bossName = EJ_GetEncounterInfo(2451) 
-		local lootTable = { 
-			181707, --Diverted Energy 
-			182449, --Resolute Barrier 
-			182605, --Tactical Retreat 
-			181826, --Translucent Image 
-			182132, --Unending Grip 
-			182318, --Viscous Ink 
-			185778, --First Fist of the So Cartel 
-			185843, --Duplicating Drape 
-			185782, --Robes of Midnight Bargains 
-			185786, --So'azmi's Fractal Vest 
-			185800, --Orbitwarp Culottes 
-			185798, --Quantum Leapers 
-			185836, --Codex of the First Technique 
+		local bossName = EJ_GetEncounterInfo(2451)
+		local lootTable = {
+			181707, --Diverted Energy
+			182449, --Resolute Barrier
+			182605, --Tactical Retreat
+			181826, --Translucent Image
+			182132, --Unending Grip
+			182318, --Viscous Ink
+			185778, --First Fist of the So Cartel
+			185843, --Duplicating Drape
+			185782, --Robes of Midnight Bargains
+			185786, --So'azmi's Fractal Vest
+			185800, --Orbitwarp Culottes
+			185798, --Quantum Leapers
+			185836, --Codex of the First Technique
 		}
 		self:RegisterBossLoot(tazaveshtheveiledmarket, lootTable, bossName)
 
@@ -715,68 +718,68 @@ if tocVersion >= "9.1.0" then
 	  -----------------------------------
 	  ----- Hylbrande
 	  -----------------------------------
-		local bossName = EJ_GetEncounterInfo(2448) 
-		local lootTable = { 
-			182105, --Astral Protection 
-			180943, --Cacophonous Roar 
-			182336, --Golden Path 
-			181373, --Harm Denial 
-			183501, --Rushed Setup 
-			183467, --Tireless Pursuit 
-			185810, --Skyreaver, Greataxe of the Keepers 
-			185779, --Spire of Expurgation 
-			185805, --Hylbrande's Retrofitted Shoulderguards 
-			185803, --Stoneflesh Spaulders 
-			185781, --Drape of Titanic Dreams 
-			185788, --Codebreaker's Cunning Sandals 
-			185790, --Treads of Titanic Deconversion 
-		} 
+		local bossName = EJ_GetEncounterInfo(2448)
+		local lootTable = {
+			182105, --Astral Protection
+			180943, --Cacophonous Roar
+			182336, --Golden Path
+			181373, --Harm Denial
+			183501, --Rushed Setup
+			183467, --Tireless Pursuit
+			185810, --Skyreaver, Greataxe of the Keepers
+			185779, --Spire of Expurgation
+			185805, --Hylbrande's Retrofitted Shoulderguards
+			185803, --Stoneflesh Spaulders
+			185781, --Drape of Titanic Dreams
+			185788, --Codebreaker's Cunning Sandals
+			185790, --Treads of Titanic Deconversion
+		}
 		self:RegisterBossLoot(tazaveshtheveiledmarket, lootTable, bossName)
 
 
 	  -----------------------------------
 	  ----- Timecap'n Hooktail
 	  -----------------------------------
-		local bossName = EJ_GetEncounterInfo(2449) 
-		local lootTable = { 
-			181498, --Grounding Surge 
-			181975, --Hardened Bones 
-			183502, --Prepared for All 
-			182469, --Rejuvenating Wind 
-			182466, --Shade of Terror 
-			180842, --Stalwart Guardian 
-			185823, --Fatebreaker, Destroyer of Futures 
-			185841, --Timetwister Tulwar 
-			185795, --Cowl of Branching Fate 
-			185796, --Dragonbane Diadem 
-			185776, --Hooktail's Commanding Gaze 
-			185797, --Rakishly Tipped Tricorne 
-			185820, --Cabochon of the Infinite Flight 
-		} 
+		local bossName = EJ_GetEncounterInfo(2449)
+		local lootTable = {
+			181498, --Grounding Surge
+			181975, --Hardened Bones
+			183502, --Prepared for All
+			182469, --Rejuvenating Wind
+			182466, --Shade of Terror
+			180842, --Stalwart Guardian
+			185823, --Fatebreaker, Destroyer of Futures
+			185841, --Timetwister Tulwar
+			185795, --Cowl of Branching Fate
+			185796, --Dragonbane Diadem
+			185776, --Hooktail's Commanding Gaze
+			185797, --Rakishly Tipped Tricorne
+			185820, --Cabochon of the Infinite Flight
+		}
 		self:RegisterBossLoot(tazaveshtheveiledmarket, lootTable, bossName)
 
 
 	  -----------------------------------
 	  ----- So'leah
 	  -----------------------------------
-		local bossName = EJ_GetEncounterInfo(2455) 
-		local lootTable = { 
+		local bossName = EJ_GetEncounterInfo(2455)
+		local lootTable = {
 			186638, --Cartel Master's Gearglider Mount
-			181838, --Charitable Soul 
-			182304, --Divine Call 
-			182316, --Fel Defender 
-			183466, --Innate Resolve 
-			181510, --Lingering Numbness 
-			182480, --Reversal of Fortune 
-			182109, --Totemic Surge 
-			185822, --Staff of Fractured Spacetime 
-			185819, --Event Horizon's Edge 
-			185785, --Embrace of the Relicbinder 
-			185784, --Novaburst Warplate 
-			185801, --Anomalous Starlit Breeches 
-			185799, --Hyperlight Leggings 
-			185813, --Signet of Collapsing Stars 
-			185818, --So'leah's Secret Technique 
+			181838, --Charitable Soul
+			182304, --Divine Call
+			182316, --Fel Defender
+			183466, --Innate Resolve
+			181510, --Lingering Numbness
+			182480, --Reversal of Fortune
+			182109, --Totemic Surge
+			185822, --Staff of Fractured Spacetime
+			185819, --Event Horizon's Edge
+			185785, --Embrace of the Relicbinder
+			185784, --Novaburst Warplate
+			185801, --Anomalous Starlit Breeches
+			185799, --Hyperlight Leggings
+			185813, --Signet of Collapsing Stars
+			185818, --So'leah's Secret Technique
 		}
 		self:RegisterBossLoot(tazaveshtheveiledmarket, lootTable, bossName)
 	end
@@ -796,7 +799,7 @@ function Dungeons:InitializeZoneDetect(ZoneDetect)
   ZoneDetect:RegisterNPCID(164967, plaguefall, 2)
   ZoneDetect:RegisterNPCID(164266, plaguefall, 3)
   ZoneDetect:RegisterNPCID(164267, plaguefall, 4)
-  
+
   local mistsoftirnascithe = "mistsoftirnascithe"
   ZoneDetect:RegisterMapID(1669, mistsoftirnascithe)
   ZoneDetect:RegisterNPCID(164567, mistsoftirnascithe, 1)
@@ -815,15 +818,15 @@ function Dungeons:InitializeZoneDetect(ZoneDetect)
   ZoneDetect:RegisterNPCID(164451, theaterofpain, 1)
   ZoneDetect:RegisterNPCID(162317, theaterofpain, 2)
   ZoneDetect:RegisterNPCID(162329, theaterofpain, 3)
-  ZoneDetect:RegisterNPCID(162309, theaterofpain, 4)  
-  ZoneDetect:RegisterNPCID(165946, theaterofpain, 5)  
-  
+  ZoneDetect:RegisterNPCID(162309, theaterofpain, 4)
+  ZoneDetect:RegisterNPCID(165946, theaterofpain, 5)
+
   local theaterofpain = "deotherside"
   ZoneDetect:RegisterMapID(1679, deotherside)
   ZoneDetect:RegisterNPCID(166473, deotherside, 1)
   ZoneDetect:RegisterNPCID(101976, deotherside, 2)
   ZoneDetect:RegisterNPCID(164450, deotherside, 3)
-  ZoneDetect:RegisterNPCID(169769, deotherside, 4) 
+  ZoneDetect:RegisterNPCID(169769, deotherside, 4)
 
   local spiresofascension = "spiresofascension"
   ZoneDetect:RegisterMapID(1693, spiresofascension)
@@ -831,7 +834,7 @@ function Dungeons:InitializeZoneDetect(ZoneDetect)
   ZoneDetect:RegisterNPCID(162058, spiresofascension, 2)
   ZoneDetect:RegisterNPCID(162060, spiresofascension, 3)
   ZoneDetect:RegisterNPCID(167410, spiresofascension, 4)
-  
+
   local sanguinedebpths = "sanguinedebpths"
   ZoneDetect:RegisterMapID(1675, sanguinedebpths)
   ZoneDetect:RegisterMapID(162100, sanguinedebpths, 1)
@@ -855,7 +858,7 @@ end
 
 function Dungeons:OnEnable()
   self:RegisterExpansion("Shadowlands", EXPANSION_NAME8)
-  self:RegisterRaidTier("Shadowlands", dungeonTierId, ("%s %s"):format(EXPANSION_NAME8, TRACKER_HEADER_DUNGEON), PLAYER_DIFFICULTY1, PLAYER_DIFFICULTY2, PLAYER_DIFFICULTY6, PLAYER_DIFFICULTY6.."+")
+  self:RegisterRaidTier("Shadowlands", dungeonTierId, ("%s %s"):format(EXPANSION_NAME8, TRACKER_HEADER_DUNGEON), PLAYER_DIFFICULTY1, PLAYER_DIFFICULTY2, PLAYER_DIFFICULTY6, PLAYER_DIFFICULTY6.."+",  PLAYER_DIFFICULTY6.."+ Casino")
 
   self:NecroticWake()
   self:Plaguefall()
@@ -865,6 +868,7 @@ function Dungeons:OnEnable()
   self:DeOtherSide()
   self:SpiresofAscension()
   self:SanguineDepths()
+	
   if tocVersion >= "9.1.0" then
 	self:TazaveshtheVeiledMarket()
   end

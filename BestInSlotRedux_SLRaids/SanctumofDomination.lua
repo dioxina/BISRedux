@@ -1,5 +1,7 @@
 local SanctumRaid = LibStub("AceAddon-3.0"):GetAddon("BestInSlotRedux"):NewModule("SanctumRaid")
 local Sanctum = "Sanctum"
+local playername, realm = UnitFullName("player")
+local realm = GetNormalizedRealmName()
 local tocVersion = select(1, GetBuildInfo())
 if tocVersion >= "9.1.0" then
 function SanctumRaid:OnEnable()
