@@ -6,9 +6,9 @@ local bonusIds = {
 		[1] = {3524},
 		[2] = {3524},
 		[3] = {3524},
---  [4] = {difficulty,6652,12/12aufwertungen,+ilvl,rarity}--M+
-		[4] = {7359,6652,7401,1560,6646},--M+
-		[5] = {6536,6652,1566,6646},--M+ Casino
+	--  [4] = {difficulty,6652,12/12aufwertungen,+ilvl,rarity}--M+
+		[4] = {7359,6652,7401,1586,6646},--M+
+		[5] = {6536,6652,1592,6646},--M+ Casino
 	},
 	difficultyconversion = {
 		[1] = 1, -- NHC
@@ -18,6 +18,24 @@ local bonusIds = {
 		[5] = 8, -- Great Vault
 	},
 }
+local bonusIds_market = {
+	bonusids = {
+		[1] = {3524},
+		[2] = {3524},
+		[3] = {3524},
+	--  [4] = {difficulty,6652,12/12aufwertungen,+ilvl,rarity}--M+
+		[4] = {7359,6652,7401,1589,6646},--M+
+		[5] = {6536,6652,1595,6646},--M+ Casino
+	},
+	difficultyconversion = {
+		[1] = 1, -- NHC
+		[2] = 2, -- HC
+		[3] = 23, -- Mythic
+		[4] = 35, -- Mythic+
+		[5] = 8, -- Great Vault
+	},
+}
+
 
 function Dungeons:NecroticWake()
   local necroticwake = "necroticwake"
@@ -597,7 +615,7 @@ if tocVersion >= "9.1.0" then
 	function Dungeons:TazaveshtheVeiledMarket()
 	  local tazaveshtheveiledmarket = "tazaveshtheveiledmarket"
 	  local name = C_Map.GetMapInfo(1990).name
-	  self:RegisterRaidInstance(dungeonTierId, tazaveshtheveiledmarket, name, bonusIds)
+	  self:RegisterRaidInstance(dungeonTierId, tazaveshtheveiledmarket, name, bonusIds_market)
 	  --------------------------------------------------
 	  ----- Tazavesh, the Veiled Market
 	  --------------------------------------------------

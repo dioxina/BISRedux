@@ -1,4 +1,9 @@
 # BestInSlotRedux Changelog
+##9.2.0
+*Added Sepulcher of the First Ones
+*Set Mythic + displayed Items (12/12 Upgrades) ilvl 272
+*Set "Myhtic + Casion" for Great Vault items ilvl 278
+
 ##9.1.0c
 *fix ilvl from dungeons
 *Added Dungeon difficutly "Myhtic + Casion" for Great Vault items (ilvl 252)

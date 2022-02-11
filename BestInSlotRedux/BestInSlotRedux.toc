@@ -1,8 +1,8 @@
-## Interface: 90100
+## Interface: 90200
 ## Title: Best In Slot Redux
 ## Notes: Keep track of your, your raid members and your guilds Best in Slot list!
 ## Author: Beleria @ Argent Dawn-EU, Anhility @ Ravencrest-EU, Sar\195\173th @ Tarren Mill-EU, Swarley @ Burning Legion-NA
-## Version: v9.1.0c
+## Version: v9.2.0
 ## SavedVariables: BestInSlotDB
 
 Libs\Libs.xml
